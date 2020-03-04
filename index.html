@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <style>
+
+
+        .row a{
+            padding-right: 50px;    
+            color: black;
+            
+
+        }
+
+        .row a:hover {
+            text-decoration: blue;
+            text-align: center;
+        }
+
+
+        .button {
+           background-color: #FF9800;
+           border: none;
+           color: white;
+           padding: 15px 32px;
+           text-decoration: none;
+           font-size: 16px;
+           margin: 4px 2px;
+           border-radius: 5px;
+        
+        }
+
+        .text1 {
+            position: absolute;
+            padding: 15px 15px 15px 15px;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0px;
+            width: 100%;
+            height: 240px;
+            padding: 40px 80px;
+        }
+
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+nav.black.navbar {
+    border-bottom: 1px solid #00000020;
+}
+
+nav.black{
+    background: white;
+    transition: .5s;
+}
+
+.navbar {
+    padding: 0px 6vw;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-nav .nav-link {
+    padding-right:  0 ;
+    padding-left: 0; 
+}
+   .nav-item {
+        padding: 10px 10px;
+        background: white;
+        color: black;
+        width: 100%;
+    }
+
+    li {
+
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    
+    </style>
+    
+    <title> Cyber Army </title>
+
+</head>
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <div class="row">
+        <div class="col-sm-5">
+            
+        
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: white;">
+            <div class="logo" style="float: left">
+                <img src="asset/img/logo_ca1.png" alt="" style="width: 150px; margin-left: 100px; "> 
+                         
+            </div>
+    
+            <button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="navbar-collapse collapse show" id="navbarNav" >
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LAYANAN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PROGRAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PUBLIKASI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TENTANG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MASUK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DAFTAR</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </div>    
+    </div>     
+
+    <div class="row">
+        <div class="col-12" >
+            <img src="asset/img/header.png" alt="" width="100%">
+            <div class="text1">
+              
+            </div>
+        </div>
+    </div>
+
+    
+    <h1 style="text-align: center; padding: 80px;">Program CyberArmy Digital Academy</h1>
+    <div class="row">
+        <div class="col-sm-4" style="text-align: center;"><img src="asset/img/Group1.png" alt="">
+            <p>Advance Hacking</p>
+            <p style="margin: 0 80px 20px 80px; font-family: roboto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi libero necessitatibus, vel molestiae illum aliquid quidem? Temporibus omnis possimus soluta ad modi amet neque at corrupti ipsa. Sunt, hic vitae?</p>
+            <a style="color: #FF9800; padding-right:10px ;  font-family: roboto;">Lihat Selengkapnya</a>
+        </div>
+        <div class="col-sm-4" style="text-align: center;"><img src="asset/img/Group2.png" alt="">
+            <p>Secure Software Development</p>   
+            <p style="margin: 0 80px 20px 80px; font-family: roboto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi libero necessitatibus, vel molestiae illum aliquid quidem? Temporibus omnis possimus soluta ad modi amet neque at corrupti ipsa. Sunt, hic vitae?</p>
+            <a style="color: #FF9800; padding-right:10px; font-family: roboto;">Lihat Selengkapnya</a>
+        </div>
+        <div class="col-sm-4" style="text-align: center;"><img src="asset/img/Group3.png" alt="">
+            <p>Security Awareness</p>
+            <p style="margin: 0 80px 20px 80px; font-family: roboto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi libero necessitatibus, vel molestiae illum aliquid quidem? Temporibus omnis possimus soluta ad modi amet neque at corrupti ipsa. Sunt, hic vitae?</p>
+            <a style="color: #FF9800; padding-right:10px ; font-family: roboto;">Lihat Selengkapnya</a>
+        </div>
+    </div>
+
+
+        <div class="row" style="width: 100%; height: 322px; background-color: black; margin: 100px 0 0 0;">
+            <div class="col-5" style="margin: 50px">                
+                <p class="left" style="color: white; padding-left:200px ; font-size: 30px; font-family: roboto; ">Partner Kami</p>
+                <p class="left" style="color: white; padding-left:200px ; font-family: roboto;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit similique natus odio placeat dignissimos alias sequi corporis, harum temporibus consequuntur!</p>
+            </div>
+
+            <div class="col-sm-4" style="margin: 50px;">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                
+                    <img src="asset/img/bg1.png" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                    
+                    <img src="asset/img/bg2.png" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                
+                    <img src="asset/img/bg3.png" style="width:100%">
+                    </div>
+                    
+                </div>
+                        <br>
+                        
+                        <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                        </div>
+        </div>     
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+                </script>
+
+            </div>
+
+        </div>
+
+    
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-sm-4" style="margin: 0 0 100px 100px;">
+                <h1>Security Awareness</h1>
+                <p style="padding-right: 200px; font-family: roboto;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, aliquam.</p>
+                <button class="button">Daftar Program</button>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="asset/img/juss.png" alt="" style="width: 100%;">
+                        <div class="text1">
+                            <h3 style="font-size: 20px; font-family: roboto;">Security Awareness 1.0</h3>
+                            <p style="font-size: 12px; font-family: roboto;">Jakarta 4,5,6 October 2019</p>     
+                            <p class="left" style="font-size: 14px; font-family: roboto;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus minus temporibus est quaerat dignissimos recusandae praesentium ea illo eaque?</p>                
+                        </div>
+                </div>     
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card"> 
+                    <img src="asset/img/juss.png" alt="" style="width: 100%;">
+                        <div class="text1">
+                            <h3 style="font-size: 20px; font-family: roboto;">Security Awareness 1.0</h3>
+                            <p style="font-size: 12px; font-family: roboto;">Jakarta 4,5,6 October 2019</p>                           
+                            <p class="left" style="font-size: 14px; font-family: roboto;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus minus temporibus est quaerat dignissimos recusandae praesentium ea illo eaque?</p>                             
+                        </div>
+                </div>     
+            </div>
+        </div>
+    
+    
+
+    <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-4" style="margin: 0 0 100px 100px;">
+            <h1 style="font-family: roboto;">Secure Software Development</h1>
+            <p style="padding-right: 200px; font-family: roboto;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, aliquam.</p>
+            <button class="button">Daftar Program</button>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="asset/img/juss.png" alt="" style="width: 100%;">
+                    <div class="text1">
+                        <h3 style="font-size: 20px; font-family: roboto;">Secure Coding 1.0</h3>
+                        <p style="font-size: 12px; font-family: roboto;">Jakarta 4,5,6 October 2019</p>
+                        <p class="left" style="font-size: 14px; font-family: roboto;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus minus temporibus est quaerat dignissimos recusandae praesentium ea illo eaque?</p>                               
+                    </div>
+                </div>     
+            </div>
+            
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="asset/img/juss.png" alt="" style="width: 100%;">
+                    <div class="text1">
+                        <h3 style="font-size: 20px; font-family: roboto;">Secure Coding 1.0</h3>
+                        <p style="font-size: 12px; font-family: roboto;">Jakarta 4,5,6 October 2019</p>
+                        <p class="left" style="font-size: 14px; font-family: roboto;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus minus temporibus est quaerat dignissimos recusandae praesentium ea illo eaque?</p>                          
+                    </div>
+            </div>     
+        </div>
+    </div>
+
+
+    <div class="row" style="margin: 100px 0 100px 0;">
+        <div class="col-sm-4"  style="margin: 0 0 100px 100px;">
+            <h1>Advanced Hacking</h1>
+            <p style="padding-right: 200px; font-family: roboto;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, aliquam.</p>
+            <button class="button">Daftar Program</button>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="asset/img/juss.png" alt="" style="width: 100%;">
+                    <div class="text1">
+                        <h3 style="font-size: 20px; font-family: roboto;;">Advanced Hacking 1.0</h3>
+                        <p style="font-size: 12px; font-family: roboto;">Jakarta 4,5,6 October 2019</p>
+                        <p class="left" style="font-size: 14px; font-family: roboto;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus minus temporibus est quaerat dignissimos recusandae praesentium ea illo eaque?</p>                          
+                    </div>
+            </div>     
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="asset/img/juss.png" alt="" style="width: 100%;">
+                    <div class="text1">
+                        <h3 style="font-size: 20px; font-family: roboto;">Advanced Hacking 1.0</h3>
+                        <p style="font-size: 12px; font-family: roboto;">Jakarta 4,5,6 October 2019</p>
+                        <p class="left" style="font-size: 14px; font-family: roboto;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus minus temporibus est quaerat dignissimos recusandae praesentium ea illo eaque?</p>                           
+                    </div>
+            </div>     
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <img src="asset/img/p6.png" alt="" style="width: 100%;">
+        </div>
+    </div>
+
+
+
+                
+    <div class="row" style="background-color: #F0F0F0;">
+        <div class="col-sm-4"  style="margin: 100px 0 100px 100px;">
+            <h1>Kata Mereka</h1>
+            <p style="padding-right: 200px; font-family: roboto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odio laborum voluptatem accusamus minima, corrupti ut sapiente hic tenetur laboriosam?</p>
+            <button class="button" style="margin-top: 200px;">Daftar Program</button>
+        </div>
+
+
+        <div class="col">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+              
+                <img src="asset/img/s1.jfif" style="width:100%">
+                <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                
+                <img src="asset/img/s2.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+              
+                <img src="asset/img/s3.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides (1)">&#10095;</a>
+                
+            </div>
+                <br>
+                
+                <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+        </div>     
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+                </script>
+
+       
+    </div>
+        
+    <footer class="footer" style="background-color: #010333;color: #fff; font-size: 13px;">
+        <div class="row">
+            <div class="col">
+                <p class="text-uppercase"><b>CYBER ARMY INDONESIA</b></p>
+                <ul style="list-style-type: none; padding-inline-start: 0;">
+                    <li><a href="#" style="color: white;">Tentang Kami</a></li>
+                    <li><a href="#" style="color: white;">Mitra Kami</a></li>
+                    <li><a href="#" style="color: white;">Kontak</a></li>
+                    <li><a href="#" style="color: white;">Karir</a></li>
+                </ul>
+            </div>  
+            <div class="col">
+                <p class="text-uppercase"><b>LAYANAN PERUSAHAAN</b></p>
+                <ul style="list-style-type: none; padding-inline-start: 0;">
+                    <li><a href="#" style="color: white;">Fully Managed by CyberArmy</a></li>
+                    <li><a href="#" style="color: white;">Self Managed by You</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <p class="text-uppercase"><b>LAYANAN BUG HUNTER</b></p>
+                <ul style="list-style-type: none; padding-inline-start: 0;">
+                    <li><a href="#" style="color: white;">Challenge Program</a></li>
+                    <li><a href="#" style="color: white;">Program List</a></li>
+                    <li><a href="#" style="color: white;">Leaderboard</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <p class="text-uppercase"><b>LAINNYA</b></p>
+                <ul style="list-style-type: none; padding-inline-start: 0;">
+                    <li><a href="#" style="color: white;">FAQ</a></li>
+                    <li><a href="#" style="color: white;">Syarat & Ketentuan</a></li>
+                    <li><a href="#" style="color: white;">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <p class="text-uppercase"><b>Social Media</b></p>
+                <div>
+                    <a href="#" style="padding: 0 3px 0 0;">
+                        <svg aria-hidden="true" role="img" viewBox="0 0 448 512" width="25px"><path fill="#fff" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path></svg>
+                    </a>
+                    <a href="#" style="padding: 0 3px 0 0;">
+                        <svg aria-hidden="true" role="img" viewBox="0 0 448 512" width="25px"><path fill="#fff" d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path></svg>
+                    </a>
+                    <a href="#" style="padding: 0 3px 0 0;">
+                        <svg aria-hidden="true" role="img" viewBox="0 0 448 512" width="25px"><path fill="#fff" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+                    </a>
+                    <a href="#" style="padding: 0 3px 0 0;">
+                        <svg aria-hidden="true" role="img" viewBox="0 0 448 512" width="25px"><path fill="#fff" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center copyright-footer"> © 2019 PT Global Inovasi Siber Indonesia - All Rights Reserved</div>
+    </footer>
+    
+</body>
+</html>
